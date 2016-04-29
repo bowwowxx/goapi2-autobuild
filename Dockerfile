@@ -17,4 +17,4 @@ COPY bin/goapi /go
 VOLUME ["/go"]
 WORKDIR /go
 
-CMD ["goapi"]
+CMD ["./goapi"]
