@@ -13,7 +13,7 @@ ENV PATH $PATH:$GOROOT/bin:$GOPATH/bin
 
 EXPOSE 8888 8443
 
-COPY bin/goapi /go
+ONBUILD COPY bin/goapi /go/
 VOLUME ["/go"]
 WORKDIR /go
 
