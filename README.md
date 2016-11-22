@@ -14,3 +14,12 @@ docker run -d -it -p 80:8888 -p 443:8443 --restart=on-failure:5 --name=api -v /h
 ```
 docker run --rm -v /home/app/api:/go -w /go bowwow/goapi2-autobuild go get -d -v && go build -o goapi .  
 ```
+
+補充新參數  
+Usage of ./goapi:
+  -server string
+    	--server=dev or pro (default "pro")
+     
+```
+docker run -d -it -p 80:8888 -p 443:8443 --name=api -v /home/app/api:/go bowwow/goapi2-autobuild ./goapi --server=dev
+```
